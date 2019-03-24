@@ -1,0 +1,75 @@
+﻿<Window x:Class="MyProgramIngeneringProject.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MyProgramIngeneringProject"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Margin" Value="5"></Setter>
+        </Style>
+        <Style TargetType="Slider">
+            <Setter Property="Margin" Value="5"></Setter>
+        </Style>
+        <Style TargetType="ComboBox">
+            <Setter Property="Margin" Value="5"></Setter>
+        </Style>
+    </Window.Resources>
+    <Grid Name="GridFull">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Menu Grid.Row="0">
+            File
+            Help
+        </Menu>
+        <StackPanel Grid.Row="1" Orientation="Horizontal">
+            <Button>Create</Button>
+            <Button>Load</Button>
+        </StackPanel>
+        <Grid Grid.Row="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <StackPanel Grid.Column="0" Grid.RowSpan="1">
+                <Label>Your zakaz</Label>
+                <TreeView></TreeView>
+            </StackPanel>
+            <StackPanel Grid.Column="1" Grid.Row="0">
+                <Label>Выберите товар</Label>
+                <RadioButton></RadioButton> 
+                <RadioButton></RadioButton>
+                <RadioButton></RadioButton>
+                <RadioButton></RadioButton>
+                <RadioButton></RadioButton>
+                <Label>Выберите количество</Label>
+                <Slider></Slider>
+                <Button>Добавить</Button>
+                <Label>Delete</Label>
+                <ComboBox></ComboBox>
+                <Button>Del</Button>
+                
+                
+
+            </StackPanel>
+            <Grid Grid.Row="1" Grid.Column="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Button Grid.Column="0">Save</Button>
+                <Button Grid.Column="1">Подтвердить</Button>
+            </Grid>
+
+        </Grid>
+    </Grid>
+</Window>
